@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, Image, View } from 'react-native';
 import Card from './Card'
 import CardSection from './CardSection'
+import Button from './Button'
 
 const AlbumDetail = ({ album }) => {
   const { title, artist, thumbnail_image, image } = album;
@@ -28,16 +29,17 @@ const AlbumDetail = ({ album }) => {
         </View>
       </CardSection>
       <CardSection>
-      <Image
-        style={imageStyle}
-        source={{ uri: image }}
-      />
+        <Image
+          style={imageStyle}
+          source={{ uri: image }}
+        />
+      </CardSection>
+      <CardSection>
+        <Button />
       </CardSection>
     </Card>
   );
 };
-
-// style={styles.containerStyle}
 
 const styles = {
   headerContentStyle: {
